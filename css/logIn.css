@@ -1,0 +1,80 @@
+body  {
+    background-image: url(../backImg/log&sign.jpg);
+    background-repeat: space;
+    background-size: cover;
+    max-height: 100vh;
+    color: rgb(189 33 122);
+    font-family: math;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+.logo {
+    height: 25vh;
+    width: 45vh;
+    margin-bottom: 0;
+
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 5vh;
+    color: aliceblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+button,
+input {
+    align-self: center;
+    color: rgb(189 33 122);
+    border: solid rgb(189 33 122);
+    border-radius: 15px;
+    background-color: #202a3ec2;
+    width: 25vw;
+    height: 7vh;
+    font-size: 150%;
+    cursor: pointer;
+    margin: 10px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+a {
+    margin: 0;
+    padding: 0;
+    color: rgb(189 33 122);
+    font-size: x-large;
+    text-align: center;
+}
+
+
+label {
+    color: rgb(189 33 122);
+    font-size: 3vh;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.ifItsNotValid {
+    position: absolute;
+    background-color: rgb(204, 204, 240);
+
+    top: 3vh;
+    left: 3vh;
+}

@@ -1,0 +1,185 @@
+body {
+    height: 100vh;
+    background-image: url("../img_p/login_background_1.jpg");
+    /* background-image: url(..//pictures/view.jpg); */
+    background-repeat: no-repeat;
+    background-size:cover;
+    /* display: flex;
+    align-self: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;justify-items: center;
+    padding-top: 20vh; */
+    /* background-color: black; */
+    display: flex;
+    flex-direction: column;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+#header {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(167, 243, 249, 0.899);
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-shadow: 5px 5px 5px rgb(89, 78, 78);
+    border-bottom: 2px solid rgba(167, 243, 249, 0.899);
+    border-radius: 100px;
+}
+
+.play {
+    position: absolute;
+    top: 50vh;
+    left: 35vw;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(81, 156, 161, 0.899);
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 900;
+    background-color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+}
+
+footer {
+    display: none;
+    display: flex;
+    align-self: center;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    justify-content: center;
+    justify-items: center;
+    padding-top: 4rem;
+}
+
+div {
+    border-radius: 20px;
+    width: 15vw;
+    height: 8vw;
+    font-size: 300%;
+    text-align: center;
+}
+
+.one {
+    background-color: aqua;
+}
+
+.two {
+    background-color: blue;
+
+}
+
+.three {
+    background-color: brown;
+}
+
+.four {
+    background-color: rgb(255, 187, 0);
+}
+
+.five {
+    background-color: rgb(255, 0, 195);
+}
+
+.six {
+    background-color: rgb(71, 141, 210);
+}
+
+.round {
+    background-color: rgb(232, 187, 187);
+    background-image: url("../img_p/enLogo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 8vw;
+    background-color: bisque;
+    cursor: pointer;
+}
+
+nav {
+
+    display: none;
+    flex-wrap: wrap;
+    gap: 0.5vw;
+    width: 65vw;
+    height: 70vh;
+    border-radius: 20px;
+
+    align-items: center;
+    justify-items: center;
+    align-self: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    padding: 1vw;
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.164);
+    border: solid rgb(250, 243, 243) 3px;
+}
+
+section {
+    grid-area: section;
+    height: 30vh;
+    width: 25vw;
+    background-color: rgba(93, 138, 143, 0.078);
+    color: rgb(89, 193, 213);
+    border-radius: 4px;
+    text-align: center;
+    font-size: x-large;
+    padding: 0;
+
+}
+
+section p {
+    font-size: 100%;
+}
+
+
+/* .toGoBack {
+    color: rgb(2 2 2);
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    width: 120px;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 5vh;
+    right: 3vw;
+    font-size: x-large;
+    font-weight: bolder;
+    background-color: rgba(188, 56, 153, 0.833);
+    border-radius: 30px;
+}
+.toGoBack img{
+    transform:rotate(-90deg) ;
+    width: 3vw;
+    height: 3vw;
+    color: rgb(216, 56, 88);
+ } */
+ .toGoBack {
+    color: rgb(145, 102, 10);
+    text-decoration: none;
+    display: flex;
+    /* flex-direction: row; */
+    flex-direction: row-reverse;
+    width: 130px;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 2vh;
+    right: 0.5vw;
+    font-size: x-large;
+    font-weight: bolder;
+    background-color: rgba(114, 95, 9, 0.183);
+    border-radius: 30px;
+}
+.toGoBack img{
+    transform:rotate(-90deg)scale(0.8) ;
+    width: 3vw;
+    height: 3vw;
+    color: rgb(216, 56, 88);
+ }

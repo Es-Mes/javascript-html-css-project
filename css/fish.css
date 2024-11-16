@@ -1,0 +1,254 @@
+body {
+    background-image: url(../backImg/fishP.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: rgb(23, 136, 164); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vw;
+    max-height: 100vh;
+    gap: 4vw;
+}
+
+.one,
+.two,
+.three,
+.four {
+    border-radius: 200px;
+    width: 9vw;
+    height: 9vw;
+    margin: 3vw;
+}
+
+.one {
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: 5s, ease-in-out 5s 50 normal forwards moveAllOne;
+
+}
+
+.two {
+    /* background-color: brown; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: 5s, ease-in-out 5s 50 normal forwards moveAllTwo;
+}
+
+.three {
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: 5s, ease-in-out 5s 50 normal forwards moveAllThree;
+}
+
+.four {
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: 5s, ease-in-out 5s 50 normal forwards keepAnimateFour;
+}
+
+section {
+    border: 5px;
+    background-image: url(../img/sea.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: cover;
+    background-color: rgba(23, 136, 177, 0.71);
+    height: 95vh;
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px;
+}
+
+.catch {
+    position: absolute;
+    border-radius: 200%;
+    width: 15vw;
+    height: 1vw;
+    left: 80vw;
+    top: 90vh;
+    background-color: rgba(41, 117, 184, 0.73);
+    background-image: ;
+}
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    width: 15vw;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    background-color: rgb(28, 12, 203);
+    color: aliceblue;
+}
+.thePlaceForTheFish {
+    height: 20vh;
+    width: 13vw;
+    border-right: solid blue 5px;
+    border-left: solid blue 5px;
+    background-color: rgba(5, 10, 13, 0.084);
+
+}
+aside h1 {
+    font-size: 200%;
+    color: rgb(31, 72, 154);
+}
+.timer {
+    color: rgb(177, 243, 146);
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    max-height: 95vh;
+}
+nav div {
+    align-self: center;
+    height: 20vh;
+    width: 1vw;
+    background-color: rgb(15, 15, 13);
+}
+.keepOne {
+    animation: 5s, ease-in-out 5s 50 normal forwards keepAnimateOne;
+}
+.keepTwo {
+    animation: 5s, ease-in-out 5s 50 normal forwards keepAnimateTwo;
+}
+@keyframes moveAnimate {
+    20% {
+        transform: translate(100%, -5rem);
+    }
+
+    40% {
+        transform: translateY(-2vw)
+    }
+
+    60% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes moveAllTwo {
+    50% {
+        transform: translateY(-4vw);
+    }
+}
+
+@keyframes moveAllOne {
+    50% {
+        transform: translateY(-4vw);
+    }
+}
+
+@keyframes moveAllThree {
+    50% {
+        transform: translate(-4vw);
+    }
+}
+
+@keyframes keepAnimateOne {
+    50% {
+        transform: translateY(4vh);
+    }
+}
+
+@keyframes keepAnimateTwo {
+    50% {
+        transform: translateY(-4vh);
+    }
+}
+
+@keyframes keepAnimateFour {
+    50% {
+        transform: translateX(4vh);
+    }
+}
+
+.choose {
+    background-color: rgb(29, 42, 223);
+}
+
+.loseFish {
+    animation: 5s ease-in-out 1 normal forwards loseFish;
+
+}
+
+@keyframes loseFish {
+    100% {
+        transform: scale(0);
+    }
+}
+
+.instructions {
+    position: absolute;
+    left: 1vw;
+    top: 1.5vh;
+    width: 70vw;
+    height: 95vh;
+    background-color: rgba(136, 185, 202, 0.79);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 300%;
+    text-align: center;
+    color: rgb(35, 11, 80);
+    flex-direction: column;
+}
+
+.instructions button {
+    background-color: rgba(179, 0, 255, 0.467);
+    margin-top: 5vw;
+    width: 12vw;
+    height: 5vh;
+    border-radius: 7px;
+}
+
+.gameOver {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75vw;
+    height: 97vh;
+    background-color: rgba(0, 255, 255, 0.21);
+    font-size: 500%;
+    color: rgb(70, 226, 237);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+ .toGoBack {
+    color: rgb(145, 102, 10);
+    text-decoration: none;
+    display: flex;
+    /* flex-direction: row; */
+    flex-direction: row-reverse;
+    width: 130px;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+  
+    font-size: x-large;
+    font-weight: bolder;
+    background-color: rgba(114, 95, 9, 0.183);
+    border-radius: 30px;
+    top: 5vh;
+    right: 3vw;
+}
+.toGoBack img{
+    transform:rotate(-90deg)scale(0.8) ;
+    width: 3vw;
+    height: 3vw;
+    color: rgb(216, 56, 88);
+ }

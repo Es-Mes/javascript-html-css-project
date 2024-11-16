@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../backImg/indexB.jpeg");
+    font-family: math;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 100vh;
+
+}
+section {
+    font-family: math;
+    color: rgb(55 18 82);
+    align-self: start;
+    margin: 9vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    border: solid rgb(55, 18, 82) 1px;
+    border-radius: 10px;
+    background-color: #99436378;
+}
+.logo{
+width: 20vw;
+padding: 0;
+margin: 0;
+}
+h1{
+    margin-top: 100px;
+}
+button {
+    margin: 2vw;
+    align-self: center;
+    color: rgb(55, 18, 82);
+    background-color: rgba(11, 11, 22, 0.135);
+    border: solid rgb(55, 18, 82) 3px;
+    width: 25vw;
+    height: 10vh;
+    font-size: 100%;
+    font-family: math;
+    cursor: pointer;
+    border-radius: 30px;
+}

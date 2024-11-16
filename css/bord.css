@@ -1,0 +1,359 @@
+body {
+    background-color: rgb(85, 190, 204);
+    /* background-image: url(../backImg/רקע\ כניסה.png);
+    background-repeat: no-repeat;
+    background-size: cover; */
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    max-height: 100vh;
+    gap: 0;
+    display: grid;
+    grid-template-areas:
+        "board aside"
+        "nav section";
+    color:rgb(237, 32, 189);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* קלאס להוראות משחק, בתחילת השחק קלאס זה יוסר */
+.oraotPlay {
+    position: absolute;
+    min-width: 70vw;
+    height: 75vh;
+    left: 0vw;
+    top: 0vh;
+    background-color: rgba(85, 190, 204, 0.555);
+
+    /* background-color: rgba(0, 255, 255, 0.685); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 200%;
+}
+
+/* הגדרות ללוח המשחק */
+.board {
+    grid-area: board;
+    align-self: self-start;
+    width: 70vw;
+    max-height: 75vh;
+    border-radius: 4px;
+}
+
+/* החלק הימני איפה שנמצא הקוביה הלוגו וכרטיסי סימני השאלה */
+aside {
+    grid-area: aside;
+    width: 28vw;
+    max-height: 75vh;
+    border-radius: 4px;
+    /* background-image: url(../backImg/bord3.jpg); */
+    /* background-color: rgb(71, 150, 159); */
+    border: solid rgb(228, 219, 231) 3px;
+    
+    background-color: rgb(71, 150, 159);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* לוגו */
+.logo {
+    width: 27vh;
+    height: 13vh;
+    margin: 30px;
+    margin-top: 0;
+}
+.toGoBack {
+    color: rgb(145, 102, 10);
+    text-decoration: none;
+    display: flex;
+    /* flex-direction: row; */
+    flex-direction: row-reverse;
+    width: 130px;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 2vh;
+    right: 0.5vw;
+    font-size: x-large;
+    font-weight: bolder;
+    background-color: rgba(114, 95, 9, 0.183);
+    border-radius: 30px;
+}
+.toGoBack img{
+    transform:rotate(-90deg)scale(0.8) ;
+    width: 3vw;
+    height: 3vw;
+    color: rgb(216, 56, 88);
+ }
+
+/* טיימר */
+.timer {
+    font-size: 300%;
+    color: #ed1474;
+}
+
+/* הגדרות לקובית המשחק */
+.cube {
+    width: 15vh;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#3eadccf2;
+    font-size: 250%;
+    border: solid 10px rgba(27, 71, 107, 0.591);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* קלפי סימני השאילה */
+.q {
+    border-radius: 6px;
+    background-image: url("../img_p/q.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    width: 8vw;
+    height: 20vh;
+    border: solid rgba(38, 61, 78, 0.603) 3px;
+
+
+}
+
+/* כאשר מרימים קלף סימן שאילהמופיע הקלאס הזה */
+.question {
+    padding: 5px;
+    background-color: rgb(66, 187, 208);
+    width: 15vw;
+    height: 38vh;
+    position: absolute;
+    left: 77vw;
+    top: 46.7vh;
+    border-radius: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    align-content: center;
+    cursor: pointer;
+    font-size: 120%;
+    color:rgb(104, 77, 226);
+}
+
+/* הגדרות לתוכן הכרטיס */
+.question h1 {
+    font-size: 130%;
+}
+
+.question input {
+    width: 1vw;
+}
+
+/* קלאס שמופיע אם לחץ על קובית המשחק אך עדיין לא הגיע ליעד */
+.ifDidntArived {
+    position: absolute;
+    text-align: center;
+    background-color: rgba(243, 108, 180, 0.692);
+    top: 73%;
+    left: 72%;
+    width: 27vw;
+    height: 6vh;
+    font-weight: bolder;
+    border-radius: 20px;
+    font-size: x-large;
+    display: none;
+}
+
+/* החלק איפה שנמצאים החיילים שאפששר לבחור */
+nav {
+    grid-area: nav;
+    margin-top: 2vh;
+    max-height: 21vh;
+    width: 70vw;
+    /* background-image: url(../backImg/bord3.jpg); */
+    border: solid rgb(228, 219, 231) 3px;
+    background-color: rgb(68, 105, 109);
+    display: flex;
+    border-radius: 4px;
+    justify-content: space-between;
+}
+
+/* הגדרות לטקסט האומר שאפשר לבחור חייל */
+nav p {
+    font-size: 250%;
+    text-align: center;
+    width: 25vw;
+}
+
+/* הגדרות לחייל המשחק */
+.playerBoard {
+    position: absolute;
+    background-image: url("../img_p/p5.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: 3vw;
+    top: 65vh;
+    width: 7vw;
+    height: 7vh;
+}
+
+/* החיילים שאפשר לבחור אם רוצים לשנות את החייל הנוכחי */
+.player {
+   
+    width: 100px;
+    height: 120px;
+    margin: 2vw;
+    cursor: pointer;
+
+}
+
+/* החלק הימני למטה איפה שכתוב שם השחקן ומספר הנקודות שצבר או הפסיד */
+section {
+    grid-area: section;
+    font-size: 110%;
+    margin-top: 2vh;
+    max-height: 21vh;
+    width: 28vw;
+    border: solid rgb(228, 219, 231) 3px;
+    background-color: rgb(93, 138, 143);
+    /* background-image: url(../backImg/bord3.jpg); */
+    /* background-color: rgb(93, 138, 143); */
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+/* גודל הכתב */
+section p {
+    font-size: 100%;
+}
+
+select h1 {
+    font-weight: bolder;
+}
+
+/* מופיע כאשר המשחק הסתיים */
+.gameOver {
+    position: absolute;
+    width: 70vw;
+    height: 75vh;
+    left: 0vw;
+    top: 0vh;
+    background-color: rgba(0, 255, 255, 0.685);
+    justify-content: center;
+    align-items: center;
+    font-size: 400%;
+    display: none;
+}
+
+/* עיצוב לקישור לדף המשחקים */
+
+
+.endBack{
+    animation: 5s ease-in-out 1 normal forwards winAnimateBack;
+}
+@keyframes winAnimateBack {
+    100% {
+        transform: scale(1) ;
+    }
+}
+.button,.gameOver a {
+    font-size: 45%;
+    position: absolute;
+    left: 38vw;
+    top: 70vh;
+    color: rgb(232, 121, 182);
+    width: 15vw;
+    height: 7vh;
+    font-size: 200%;
+    background-color: #f04592;
+    border-radius: 50px;
+    cursor: pointer;
+    display: none;
+}
+.gameOver a{
+    left:18vw ;
+    font-size: 60%;
+    height: 6vh;
+    text-decoration: none;
+justify-content: center;
+border: black solid 2px;}
+.button:hover,.gameOver a:hover{
+    background-color: #151213;
+ 
+}
+/* אנימציה אם השחקן הפסיד */
+.end {
+    position: absolute;
+    animation: 5s ease-in-out 1 normal forwards loseAnimate;
+
+}
+
+/* אנימציה אם השחקן הרוויח */
+.end2 {
+    animation: 5s ease-in-out 1 normal forwards winAnimate;
+ 
+
+}
+
+/* הגדרות אנימציה */
+@keyframes loseAnimate {
+    100% {
+        transform: rotate(100deg) scale(4) translate(-50%, -50%);
+        left: 20%;
+        top: 68%;
+    }
+}
+
+@keyframes winAnimate {
+    100% {
+        transform: scale(4) translate(-50%, -50%);
+        left: 50%;
+        top: 68%;
+    }
+}
+
+
+.showWereItsHaveToBe{
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    left: 3vw;
+    top: 65vh;
+    animation: 5s, ease-in-out 5s 1000 normal forwards moveArrow;
+    box-shadow: #e72a23b4 0px 5px 0px;
+    border-radius: 5px;
+    padding-bottom: 10px;
+
+}
+@keyframes moveArrow {
+    50% {
+        transform: translateY(-0.5vw);
+    }
+}
+/* .endBack{
+    animation: 5s ease-in-out 1 normal forwards winAnimateBack;
+}
+@keyframes winAnimateBack {
+    100% {
+        transform: scale(1) ;
+    }
+}
+.button {
+    font-size: 45%;
+    position: absolute;
+    left: 34vw;
+    top: 70vh;
+    color: rgb(232, 121, 182);
+    width: 20vw;
+    font-size: 300%;
+    background-color: #ed1474;
+    border-radius: 50px;
+} */
